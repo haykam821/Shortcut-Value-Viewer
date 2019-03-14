@@ -1,0 +1,10 @@
+{
+	"name": "shortcut-value-viewer",
+	"version": "1.0.0",
+	"description": "A RunKit value viewer for Shortcuts.js shortcuts.",
+	"license": "MIT",
+	"dependencies": {
+		"@runkit/value-viewer": "1.0.0",
+		"shortcuts.js": "^3.0.0"
+	}
+}
