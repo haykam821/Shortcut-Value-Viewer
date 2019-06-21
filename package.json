@@ -9,5 +9,22 @@
 		"react-dom": "^16.8.6",
 		"shortcuts.js": "^3.0.0",
 		"styled-components": "^4.3.2"
-	}
+	},
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/haykam821/Shortcut-Value-Viewer.git"
+	},
+	"keywords": [
+		"shortcuts",
+		"value-viewer"
+	],
+	"author": "haykam821",
+	"bugs": {
+		"url": "https://github.com/haykam821/Shortcut-Value-Viewer/issues"
+	},
+	"homepage": "https://github.com/haykam821/Shortcut-Value-Viewer#readme"
 }
