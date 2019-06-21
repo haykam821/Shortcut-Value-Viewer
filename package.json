@@ -5,6 +5,8 @@
 	"license": "MIT",
 	"dependencies": {
 		"@runkit/value-viewer": "1.0.0",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
 		"shortcuts.js": "^3.0.0"
 	}
 }

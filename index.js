@@ -1,8 +1,17 @@
 const { ValueViewerSymbol } = require("@runkit/value-viewer");
 const { Shortcut } = require("shortcuts.js");
 
-function buildPreview(shortcut) {
-	return `<p>TODO</p>`;
+const React = require("react");
+const elem = React.createElement;
+
+const { renderToStaticMarkup } = require("react-dom/server");
+
+class App extends React.Component {
+	render() {
+		return elem(React.Fragment, null, [
+			elem("p", null, "TODO"),
+		]);
+	}
 }
 
 function shortcutValueViewer(shortcut) {
@@ -12,7 +21,9 @@ function shortcutValueViewer(shortcut) {
 
 	shortcut[ValueViewerSymbol] = {
 		title: "Shortcut",
-		HTML: buildPreview(shortcut),
+		HTML: renderToStaticMarkup(elem(App, {
+			shortcut,
+		})),
 	};
 	return shortcut;
 }
