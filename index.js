@@ -11,8 +11,8 @@ function shortcutValueViewer(shortcut) {
 	}
 
 	shortcut[ValueViewerSymbol] = {
-		name: "Shortcut",
-		html: buildPreview(shortcut),
+		title: "Shortcut",
+		HTML: buildPreview(shortcut),
 	};
 	return shortcut;
 }
