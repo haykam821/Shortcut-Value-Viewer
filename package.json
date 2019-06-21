@@ -7,6 +7,7 @@
 		"@runkit/value-viewer": "1.0.0",
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6",
-		"shortcuts.js": "^3.0.0"
+		"shortcuts.js": "^3.0.0",
+		"styled-components": "^4.3.2"
 	}
 }
