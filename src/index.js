@@ -140,12 +140,18 @@ const App = styled(class extends React.Component {
 	}
 `;
 
+/**
+ * Renders a value viewer for a shortcut.
+ * @param {Shortcut} shortcut The shortcut to render a value viewer of.
+ * @param {boolean} debug Whether to enable debug features for the rendered value viewer.
+ * @returns {string} The rendered HTML for a shortcut's value viewer.
+ */
 function render(shortcut, debug) {
 	const sheet = new ServerStyleSheet();
 
 	const html = renderToStaticMarkup(sheet.collectStyles(elem(App, {
-		shortcut,
 		debug,
+		shortcut,
 	})));
 	const styleTags = sheet.getStyleTags();
 
@@ -159,13 +165,13 @@ function render(shortcut, debug) {
  * @returns {Shortcut} The shortcut with a value viewer added.
  */
 function shortcutValueViewer(shortcut, debug = false) {
-	if (!shortcut instanceof Shortcut) {
+	if (!(shortcut instanceof Shortcut)) {
 		throw new TypeError("Shortcut must be an instance of Shortcuts.js shortcut.");
 	}
 
 	shortcut[ValueViewerSymbol] = {
-		title: "Shortcut",
 		HTML: render(shortcut, debug),
+		title: "Shortcut",
 	};
 	return shortcut;
 }
