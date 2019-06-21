@@ -152,6 +152,12 @@ function render(shortcut, debug) {
 	return html + styleTags;
 }
 
+/**
+ * Adds a value viewer to a shortcut.
+ * @param {Shortcut} shortcut The shortcut to add a value viewer to.
+ * @param {boolean} debug Whether to enable debug features for the value viewer.
+ * @returns {Shortcut} The shortcut with a value viewer added.
+ */
 function shortcutValueViewer(shortcut, debug = false) {
 	if (!shortcut instanceof Shortcut) {
 		throw new TypeError("Shortcut must be an instance of Shortcuts.js shortcut.");
