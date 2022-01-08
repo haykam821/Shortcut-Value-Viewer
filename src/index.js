@@ -37,6 +37,9 @@ const PrimaryButton = styled.a`
 `;
 
 const App = styled(class extends React.Component {
+	/**
+	 * Renders the value viewer.
+	 */
 	render() {
 		const shortcut = this.props.shortcut;
 
