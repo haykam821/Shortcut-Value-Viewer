@@ -36,5 +36,8 @@
 		"eslint-plugin-json": "^1.4.0",
 		"eslint-plugin-markdown": "^1.0.0",
 		"eslint-plugin-unicorn": "^9.1.0"
+	},
+	"eslintConfig": {
+		"extends": "eslint-config-haykam"
 	}
 }
